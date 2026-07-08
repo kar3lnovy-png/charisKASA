@@ -7,16 +7,11 @@ const EMPLOYEES = {
   "3002": "Filip Dvořáček",
   "3003": "Pavel Krchňavý",
   "3004": "Márinka Novotná",
-  "3005": "Tereza Sovová",
-  "3006": "Klára Čalkovská",
-  "3007": "Monika Devetterová",
-  "3008": "Kateřina Šebelová",
-  "3009": "Pavlína Tesařová",
-  "2010": "Konstancie Jágerová",
-  "2011": "Mariana Kobylková",
-  "2012": "Terezie Kobylková",
-  "2013": "Eliška  Pölzerová ",
-  "2012": "Markéta  Devetterová "
+  "3005": "Alžběta  Novotná ",
+  "3006": "Tomáš Janko",
+  "3007": "Venuše J. Vokurková",
+  "3008": "Kateřina Honková",
+  "3009": "Alice  Crhová"
 };
 
 // Produkty rozdělené podle dodavatelů
