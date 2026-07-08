@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Charis Pokladna</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-blue-50 min-h-screen text-slate-800">
+
+<!-- ================= LOGIN SCREEN ================= -->
+<div id="login-screen" class="min-h-screen flex flex-col items-center justify-center p-4">
+  <div class="bg-white rounded-2xl shadow-xl p-8 w-full max-w-sm border border-blue-100">
+    <div class="text-center mb-6">
+      <div class="w-16 h-16 bg-blue-600 rounded-full mx-auto mb-3 flex items-center justify-center text-white text-2xl font-bold">C</div>
+      <h1 class="text-2xl font-bold text-blue-800">Charis Pokladna</h1>
+      <p class="text-slate-500 text-sm mt-1">Zadej svůj PIN kód</p>
+    </div>
+
+    <div id="pin-display" class="flex justify-center gap-3 mb-6">
+      <span class="pin-dot"></span>
+      <span class="pin-dot"></span>
+      <span class="pin-dot"></span>
+      <span class="pin-dot"></span>
+    </div>
+
+    <div id="pin-error" class="text-red-500 text-center text-sm mb-3 hidden">Neplatný PIN, zkus to znovu.</div>
+
+    <div class="grid grid-cols-3 gap-3">
+      <button class="pin-btn" data-num="1">1</button>
+      <button class="pin-btn" data-num="2">2</button>
+      <button class="pin-btn" data-num="3">3</button>
+      <button class="pin-btn" data-num="4">4</button>
+      <button class="pin-btn" data-num="5">5</button>
+      <button class="pin-btn" data-num="6">6</button>
+      <button class="pin-btn" data-num="7">7</button>
+      <button class="pin-btn" data-num="8">8</button>
+      <button class="pin-btn" data-num="9">9</button>
+      <button id="pin-clear" class="pin-btn bg-blue-100 text-blue-700">C</button>
+      <button class="pin-btn" data-num="0">0</button>
+      <button id="pin-back" class="pin-btn bg-blue-100 text-blue-700">⌫</button>
+    </div>
+  </div>
+</div>
+
+<!-- ================= POS SCREEN ================= -->
+<div id="pos-screen" class="hidden min-h-screen flex flex-col">
+
+  <!-- Header -->
+  <header class="bg-blue-700 text-white px-4 py-3 flex justify-between items-center shadow-md">
+    <div>
+      <h1 class="font-bold text-lg">Charis Pokladna</h1>
+      <p class="text-blue-200 text-sm">Přihlášen: <span id="employee-name" class="font-semibold text-white"></span></p>
+    </div>
+    <button id="logout-btn" class="bg-blue-800 hover:bg-blue-900 px-3 py-2 rounded-lg text-sm transition">Odhlásit</button>
+  </header>
+
+  <div class="flex flex-col md:flex-row flex-1 overflow-hidden">
+
+    <!-- Products -->
+    <main class="flex-1 overflow-y-auto p-4">
+      <!-- Supplier tabs -->
+      <div id="supplier-tabs" class="flex gap-2 mb-4 overflow-x-auto pb-2"></div>
+      <!-- Product grid -->
+      <div id="product-grid" class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3"></div>
+    </main>
+
+    <!-- Cart -->
+    <aside class="w-full md:w-96 bg-white border-t md:border-t-0 md:border-l border-blue-100 flex flex-col shadow-lg">
+      <div class="p-4 border-b border-blue-100">
+        <h2 class="font-bold text-blue-800 text-lg">🛒 Košík</h2>
+      </div>
+      <div id="cart-items" class="flex-1 overflow-y-auto p-4 space-y-2">
+        <p id="cart-empty" class="text-slate-400 text-center mt-8">Košík je prázdný</p>
+      </div>
+      <div class="p-4 border-t border-blue-100 bg-blue-50">
+        <div class="flex justify-between items-center mb-3">
+          <span class="font-semibold text-slate-600">Celkem:</span>
+          <span id="cart-total" class="text-2xl font-bold text-blue-800">0 Kč</span>
+        </div>
+        <button id="checkout-btn" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 rounded-xl transition disabled:opacity-40 disabled:cursor-not-allowed">
+          Zaúčtovat
+        </button>
+      </div>
+    </aside>
+  </div>
+</div>
+
+<!-- ================= LOADING / SUCCESS OVERLAY ================= -->
+<div id="overlay" class="hidden fixed inset-0 bg-black/50 flex items-center justify-center z-50">
+  <div class="bg-white rounded-2xl p-8 text-center max-w-xs w-full mx-4">
+    <div id="overlay-loading" class="hidden">
+      <div class="spinner mx-auto mb-4"></div>
+      <p class="font-semibold text-slate-700">Zpracovávám prodej...</p>
+    </div>
+    <div id="overlay-success" class="hidden">
+      <div class="text-5xl mb-3">✅</div>
+      <p class="font-bold text-blue-800 text-lg">Prodej zaznamenán!</p>
+    </div>
+    <div id="overlay-error" class="hidden">
+      <div class="text-5xl mb-3">⚠️</div>
+      <p class="font-bold text-red-600 text-lg">Chyba při odesílání</p>
+      <p class="text-slate-500 text-sm mt-1">Zkontroluj připojení a zkus to znovu.</p>
+      <button id="overlay-close" class="mt-4 bg-blue-600 text-white px-4 py-2 rounded-lg">Zavřít</button>
+    </div>
+  </div>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
