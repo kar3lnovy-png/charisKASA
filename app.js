@@ -45,7 +45,7 @@ const PRODUCTS = {
     { name: "Parkování SOBOTA", price: 120 },
     { name: "Parkování NEDĚLE", price: 120 },
     { name: "Parkování ZDARMA celokonferenční", price: 0 },
-    { name: "Parkování ZDARMA jednodenní", price: 120 }
+    { name: "Parkování ZDARMA jednodenní", price: 120 },
   ],
 };
 
