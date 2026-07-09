@@ -18,14 +18,12 @@ const EMPLOYEES = {
 const PRODUCTS = {
   "Plné vstupné": [
     { name: "Plný celokonferenční vstup", price: 1050 },
-    { name: "Plné ČTVRTEK", price: 400 },
     { name: "Plné PÁTEK", price: 400 },
     { name: "Plné SOBOTA", price: 400 },
     { name: "Plné NEDĚLE", price: 400 },
   ],
   "Snížené vstupné": [
     { name: "Snížený celokonferenční vstup", price: 700 },
-    { name: "Snížené ČTVRTEK", price: 300 },
     { name: "Snížené PÁTEK", price: 300 },
     { name: "Snížené SOBOTA", price: 300 },
     { name: "Snížené NEDĚLE", price: 300 },
