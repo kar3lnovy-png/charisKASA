@@ -36,13 +36,16 @@ const PRODUCTS = {
     { name: "JEPTIŠKA", price: 0 },
     { name: "SEXY JEPTIŠKA", price: 0 },
     { name: "PŘÍMLUVCE", price: 0 },
+    { name: "ZTP", price: 0 }
   ],
   "Parkování": [
     { name: "Parkování celokonferenční", price: 440 },
     { name: "Parkování ČTVRTEK", price: 120 },
     { name: "Parkování PÁTEK", price: 120 },
     { name: "Parkování SOBOTA", price: 120 },
-    { name: "Parkování NEDĚLE", price: 120 }
+    { name: "Parkování NEDĚLE", price: 120 },
+    { name: "Parkování ZDARMA celokonferenční", price: 0 },
+    { name: "Parkování ZDARMA jednodenní", price: 120 }
   ],
 };
 
