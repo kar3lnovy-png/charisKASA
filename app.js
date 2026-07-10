@@ -37,8 +37,7 @@ const PRODUCTS = {
     { name: "ZTP", price: 0 }
   ],
   "Parkování": [
-    { name: "Parkování celokonferenční", price: 440 },
-    { name: "Parkování ČTVRTEK", price: 120 },
+    { name: "Parkování celokonferenční", price: 360 },
     { name: "Parkování PÁTEK", price: 120 },
     { name: "Parkování SOBOTA", price: 120 },
     { name: "Parkování NEDĚLE", price: 120 },
