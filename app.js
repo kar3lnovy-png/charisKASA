@@ -18,13 +18,11 @@ const EMPLOYEES = {
 const PRODUCTS = {
   "Plné vstupné": [
     { name: "Plný celokonferenční vstup", price: 1050 },
-    { name: "Plné PÁTEK", price: 400 },
     { name: "Plné SOBOTA", price: 400 },
     { name: "Plné NEDĚLE", price: 400 },
   ],
   "Snížené vstupné": [
     { name: "Snížený celokonferenční vstup", price: 700 },
-    { name: "Snížené PÁTEK", price: 300 },
     { name: "Snížené SOBOTA", price: 300 },
     { name: "Snížené NEDĚLE", price: 300 },
     ],
@@ -39,8 +37,7 @@ const PRODUCTS = {
     { name: "Parkování ZDARMA jednodenní", price: 0 },
   ],
   "Parkování": [
-    { name: "Parkování celokonferenční", price: 360 },
-    { name: "Parkování PÁTEK", price: 120 },
+    { name: "Parkování celokonferenční", price: 240 },
     { name: "Parkování SOBOTA", price: 120 },
     { name: "Parkování NEDĚLE", price: 120 },
   ],
